@@ -1,0 +1,31 @@
+VCD info: dumpfile output/traffic_fsm.vcd opened for output.
+---- Test 1: reset -> RED ----
+PASS t=6 ns state=00 r1 g0 y0
+---- Test 2: three full cycles ----
+PASS t=16 ns state=01 r0 g1 y0
+PASS t=26 ns state=10 r0 g0 y1
+PASS t=36 ns state=00 r1 g0 y0
+PASS t=46 ns state=01 r0 g1 y0
+PASS t=56 ns state=10 r0 g0 y1
+PASS t=66 ns state=00 r1 g0 y0
+PASS t=76 ns state=01 r0 g1 y0
+PASS t=86 ns state=10 r0 g0 y1
+PASS t=96 ns state=00 r1 g0 y0
+---- Test 3: synchronous reset proof ----
+PASS t=106 ns state=01 r0 g1 y0
+PASS t=109 ns state=01 r0 g1 y0
+PASS t=116 ns state=00 r1 g0 y0
+---- Test 4: mid-run reset ----
+PASS t=126 ns state=01 r0 g1 y0
+PASS t=136 ns state=00 r1 g0 y0
+PASS t=146 ns state=01 r0 g1 y0
+PASS t=156 ns state=10 r0 g0 y1
+PASS t=166 ns state=00 r1 g0 y0
+---- Test 5: unused state 11 ----
+INFO t=171 ns state=11 r0 g0 y0 (all lights expected 0 in 11)
+PASS t=171 ns unused state 11 shows all lights off
+PASS t=176 ns state=10 r0 g0 y1
+PASS t=186 ns state=00 r1 g0 y0
+PASS t=196 ns state=01 r0 g1 y0
+==== DONE: 0 error(s) ====
+tb\traffic_fsm_tb.v:114: $finish called at 196000 (1ps)
